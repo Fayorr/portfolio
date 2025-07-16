@@ -9,7 +9,7 @@ import {
 	// NavigationMenuTrigger,
 	// NavigationMenuViewport,
 } from '@/components/ui/navigation-menu';
-import { ModeToggle } from '../ModeToggler';
+import { ModeToggle } from '@/components/modeToggler';
 export function Header() {
 	return (
 		<header className='flex justify-between items-center p-4 bg-[#ffffff] dark:bg-[#0f172a]'>
