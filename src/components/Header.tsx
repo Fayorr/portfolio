@@ -36,7 +36,7 @@ export function Header() {
 				/>
 			)}
 			<div
-				className={` absolute md:relative top-0 right-0 w-[40%]  md:w-auto items-center gap-4 ${
+				className={` absolute md:relative top-0 right-0 w-[50%] sm:w-[40%]  md:w-auto items-center gap-4 ${
 					toggle ? 'flex' : 'hidden'
 				} md:flex  flex-col md:flex-row h-screen md:h-auto bg-orange-500 md:bg-transparent`}
 			>
