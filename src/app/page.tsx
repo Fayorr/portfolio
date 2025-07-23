@@ -13,7 +13,7 @@ export default function Home() {
 						Hello <span>.</span>
 					</h2>
 					<div>
-						<p>I&apos;m Fayp</p>
+						<p>I&apos;m Fayo</p>
 						<p>____________</p>
 					</div>
 					<h2>Software Developer</h2>
