@@ -8,38 +8,64 @@ export default function Home() {
 	return (
 		<>
 			<Header />
-			<div className='flex flex-col md:flex-row items-center justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[Montserrat] dark:bg-[#0f172a]'>
-				{/* <div className='flex flex-col  items-center justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[Montserrat] dark:bg-[#0f172a]'>
-					<h2>
-						Hello <span>.</span>
+			<div className='flex flex-col md:flex-row items-center justify-center min-h-screen px-8  gap-16 sm:p-20 font-[Montserrat] dark:bg-[#0f172a]'>
+				<div className='flex flex-col items-center md:items-start mt-13 md:mt-5 justify-center min-h-screen p-0  gap-16 sm:p-0 w-[100%] md:w-1/2'>
+					<h2 className='font-montserrat  md:text-4xl text-2xl font-bold dark:text-white text-black'>
+						Hello<span className='text-orange-500'>.</span>
 					</h2>
-					<div>
-						<p>I&apos;m Fayo</p>
-						<p>____________</p>
+					<div className='flex md:flex-row flex-col-reverse gap-2'>
+						<p className='flex justify-center items-center text-3xl font-bold text-orange-500'>
+							______
+						</p>
+						<p className='text-black dark:text-white text-2xl md:text-4xl'>
+							I&apos;m Fayo
+						</p>
 					</div>
-					<h2>Software Developer</h2>
-					<div>
-						<Button>Got a project? </Button>
-						<Button>My resume</Button>
+					<h2 className='text-4xl md:text-5xl font-bold text-black dark:text-white'>
+						Software Developer
+					</h2>
+					<div className='flex flex-row gap-2'>
+						<Button
+							className='cursor-pointer'
+							asChild
+						>
+							<Link
+								target='_blank'
+								href='https://wa.me/2348090928406?text=Hello%20Fayokunmi%2C%20I%20saw%20your%20portfolio%20and%20I%20have%20a%20project%20for%20you.'
+							>
+								Got a project?
+							</Link>
+						</Button>
+						<Button
+							className='cursor-pointer'
+							asChild
+						>
+							<Link
+								target='_blank'
+								href='https://www.linkedin.com/in/fayokunmi-osho'
+							>
+								My resume
+							</Link>
+						</Button>
 					</div>
-				</div> */}
-				<div className='flex justify-center items-center'>
+				</div>
+				<div className='flex justify-center items-center bg-red-500'>
 					{/* Light mode image */}
-					{/* <Image
+					<Image
 						src='/images/porfolioPicLight.png'
 						alt='Fayo'
-						width={400}
-						height={400}
+						width={550}
+						height={550}
 						className='block dark:hidden'
-					/> */}
+					/>
 					{/* Dark mode image */}
-					{/* <Image
+					<Image
 						src='/images/porfolioPicDark.png'
 						alt='Fayo'
-						width={400}
-						height={400}
+						width={550}
+						height={550}
 						className='hidden dark:block'
-					/> */}
+					/>
 				</div>
 			</div>
 			<div className='grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] dark:bg-[#0f172a]'>
