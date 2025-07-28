@@ -26,7 +26,7 @@ export default function Home() {
 					</h2>
 					<div className='flex flex-row gap-2'>
 						<Button
-							className='cursor-pointer'
+							className='cursor-pointer rounded-none p-5 bg-orange-500 border-2 border-orange-500 dark:text-white hover:bg-transparent'
 							asChild
 						>
 							<Link
@@ -37,7 +37,7 @@ export default function Home() {
 							</Link>
 						</Button>
 						<Button
-							className='cursor-pointer'
+							className='cursor-pointer rounded-none p-5 bg-transparent dark:text-white border-2 border-orange-500 hover:bg-orange-500'
 							asChild
 						>
 							<Link
