@@ -8,8 +8,8 @@ export default function Home() {
 	return (
 		<>
 			<Header />
-			<div className='flex flex-col md:flex-row items-center justify-center min-h-screen px-8  gap-16 sm:p-20 font-[Montserrat] dark:bg-[#0f172a]'>
-				<div className='flex flex-col items-center md:items-start mt-13 md:mt-5 justify-center min-h-screen p-0  gap-16 sm:p-0 w-[100%] md:w-1/2'>
+			<div className='flex flex-col md:flex-row items-center justify-center  px-8 md:px-20 mt-20 md:mt-20 pt-10 md:pt-12 font-[Montserrat] dark:bg-[#0f172a]'>
+				<div className='flex flex-col items-center md:items-start mt-13 md:mt-5  justify-center min-h-auto p-0  gap-8 md:gap-14 md:p-0 w-[100%] md:w-1/2 '>
 					<h2 className='font-montserrat  md:text-4xl text-2xl font-bold dark:text-white text-black'>
 						Hello<span className='text-orange-500'>.</span>
 					</h2>
@@ -37,7 +37,7 @@ export default function Home() {
 							</Link>
 						</Button>
 						<Button
-							className='cursor-pointer rounded-none p-5 bg-transparent dark:text-white border-2 border-orange-500 hover:bg-orange-500'
+							className='cursor-pointer rounded-none p-5 bg-transparent text-black dark:text-white border-2 border-orange-500 hover:bg-orange-500'
 							asChild
 						>
 							<Link
@@ -49,7 +49,7 @@ export default function Home() {
 						</Button>
 					</div>
 				</div>
-				<div className='flex justify-center items-center bg-red-500'>
+				<div className='flex justify-center items-center '>
 					{/* Light mode image */}
 					<Image
 						src='/images/porfolioPicLight.png'
@@ -67,6 +67,18 @@ export default function Home() {
 						className='hidden dark:block'
 					/>
 				</div>
+			</div>
+			<div className='bg-orange-200 dark:bg-[#17232d] text-lg font-bold font-montserrat py-5 px-8 md:px-20 h-auto'>
+				<ul className='flex flex-wrap justify-center md:justify-between gap-6 md:gap-0'>
+					<li>HTML5</li>
+					<li>CSS3</li>
+					<li>JavaScript</li>
+					<li>React</li>
+					<li>Next.js</li>
+					<li>TypeScript</li>
+					<li>Git</li>
+					<li>Github</li>
+				</ul>
 			</div>
 			<div className='grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] dark:bg-[#0f172a]'>
 				<main className='flex flex-col gap-[32px] row-start-2 justify-center items-center sm:items-center font-montserrat'>
