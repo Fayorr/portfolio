@@ -1,5 +1,4 @@
 'use client';
-import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Mail, Github, Linkedin } from 'lucide-react';
@@ -8,7 +7,6 @@ import './globals.css';
 import { Header } from '@/components/Header';
 
 export default function Home() {
-	const { theme } = useTheme();
 	return (
 		<>
 			<Header />
