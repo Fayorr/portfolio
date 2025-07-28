@@ -1,10 +1,14 @@
+'use client';
+import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Mail, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import './globals.css';
 import { Header } from '@/components/Header';
 
 export default function Home() {
+	const { theme } = useTheme();
 	return (
 		<>
 			<Header />
@@ -68,8 +72,8 @@ export default function Home() {
 					/>
 				</div>
 			</div>
-			<div className='bg-orange-200 dark:bg-[#17232d] text-lg font-bold font-montserrat py-5 px-8 md:px-20 h-auto'>
-				<ul className='flex flex-wrap justify-center md:justify-between gap-6 md:gap-0'>
+			<div className='bg-[#17232d] text-lg font-bold font-montserrat py-5 px-8 md:px-20 h-auto'>
+				<ul className='grid grid-cols-4 sm:grid-cols-2 md:flex md:justify-between gap-4 md:gap-0 text-center md:text-left'>
 					<li>HTML5</li>
 					<li>CSS3</li>
 					<li>JavaScript</li>
@@ -80,7 +84,67 @@ export default function Home() {
 					<li>Github</li>
 				</ul>
 			</div>
-			<div className='grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] dark:bg-[#0f172a]'>
+			<section
+				id='about'
+				className=''
+			>
+				<div></div>
+				<div></div>
+			</section>
+			<section
+				id='contact'
+				className=''
+			>
+				<div></div>
+				<div></div>
+			</section>
+			<section
+				id='footer'
+				className=''
+			>
+				{/* <br />
+				<br /> */}
+				<div className='flex flex-col items-center justify-between dark:bg-[#17232d] py-8 h-[calc(100vh/3)]'>
+					<h2 className='font-[montserrat] text-lg'>Fayokunmi Osho</h2>
+					<p>Designed with love, all rights reserved.</p>
+					<div className='flex justify-between w-[calc(100vw/3)] md:w-[calc(100vw/7)]'>
+						<div className='cursor-pointer flex justify-center items-center rounded-full h-12 w-12 bg-[#0f172a] dark:bg-white'>
+							<Link
+								target='_blank'
+								href='mailto:fayokunmiosho@gmail.com'
+							>
+								<Mail
+									size={25}
+									className='text-white dark:text-[#0f172a] '
+								/>
+							</Link>
+						</div>
+						<div className='cursor-pointer flex justify-center items-center rounded-full h-12 w-12 bg-[#0f172a] dark:bg-white'>
+							<Link
+								target='_blank'
+								href='https://www.linkedin.com/in/fayokunmi-osho'
+							>
+								<Linkedin
+									size={25}
+									className='text-white dark:text-[#0f172a] '
+								/>
+							</Link>
+						</div>
+						<div className='cursor-pointer flex justify-center items-center rounded-full h-12 w-12 bg-[#0f172a] dark:bg-white'>
+							<Link
+								target='_blank'
+								href='https://www.github.com/Fayorr'
+							>
+								<Github
+									size={25}
+									className='text-white dark:text-[#0f172a] '
+								/>
+							</Link>
+						</div>
+					</div>
+				</div>
+			</section>
+			{/* <div className='grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] dark:bg-[#0f172a]'>
 				<main className='flex flex-col gap-[32px] row-start-2 justify-center items-center sm:items-center font-montserrat'>
 					<h1 className='text-4xl font-bold text-center'>
 						Portfolio Coming Soon!
@@ -97,8 +161,8 @@ export default function Home() {
 							Go to Github
 						</Link>
 					</Button>
-				</main>
-			</div>
+				</main> 
+			</div> */}
 		</>
 	);
 }
