@@ -4,9 +4,23 @@ import Image from 'next/image';
 import { Mail, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import './globals.css';
+import { useForm, SubmitHandler } from 'react-hook-form';
+
 import { Header } from '@/components/Header';
 
 export default function Home() {
+	interface IFormInput {
+		name: string;
+		email: string;
+		message: string;
+	}
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+	} = useForm<IFormInput>();
+
+	const onSubmit: SubmitHandler<IFormInput> = (data) => console.log(data);
 	return (
 		<>
 			<Header />
@@ -28,7 +42,7 @@ export default function Home() {
 					</h2>
 					<div className='flex flex-row gap-2'>
 						<Button
-							className='cursor-pointer rounded-none p-5 bg-orange-500 border-2 border-orange-500 dark:text-white hover:bg-transparent'
+							className='cursor-pointer rounded-none p-5 bg-orange-500 border-2 border-orange-500 text-black dark:text-white hover:bg-transparent'
 							asChild
 						>
 							<Link
@@ -70,7 +84,7 @@ export default function Home() {
 					/>
 				</div>
 			</div>
-			<div className='bg-[#17232d] text-lg font-bold font-montserrat py-5 px-8 md:px-20 h-auto'>
+			<div className='bg-[#fcddca] dark:bg-[#17232d] text-lg font-bold font-montserrat py-5 px-8 md:px-20 h-auto'>
 				<ul className='grid grid-cols-4 sm:grid-cols-2 md:flex md:justify-between gap-4 md:gap-0 text-center md:text-left'>
 					<li>HTML5</li>
 					<li>CSS3</li>
@@ -82,19 +96,61 @@ export default function Home() {
 					<li>Github</li>
 				</ul>
 			</div>
-			<section
+			{/* <section
 				id='about'
 				className=''
 			>
 				<div></div>
 				<div></div>
-			</section>
+			</section> */}
 			<section
 				id='contact'
 				className=''
 			>
-				<div></div>
-				<div></div>
+				<div className='flex flex-col md:flex-row items-center justify-center  px-8 md:px-20 py-20 md:py-30  md:pt-12 font-[Montserrat] dark:bg-[#0f172a]'>
+					<div className='flex flex-col items-center md:items-start mt-13 md:mt-5  justify-center min-h-auto p-0  gap-8 md:gap-14 md:p-0 w-[100%] md:w-1/2 '>
+						<div className='flex md:flex-row flex-col-reverse gap-0 '>
+							<p className='flex justify-center items-center text-1xl font-bold text-orange-500'>
+								______
+							</p>
+							<p className='text-black dark:text-white text-2xl font-bold md:text-4xl'>
+								Contact
+							</p>
+						</div>
+						<h2 className='flex flex-col justify-center md:justify-start items-center md:items-start text-4xl md:text-5xl font-bold text-black dark:text-white  w-[100%]'>
+							Have a project? <span>Lets talk</span>
+						</h2>
+					</div>
+					<div className='flex justify-center items-center w-[80vw] md:w-1/2  h-[auto] '>
+						<form
+							onSubmit={handleSubmit(onSubmit)}
+							className='flex flex-col grow pt-6 '
+						>
+							<label>Name</label>
+							<input
+								{...register('name', { required: true })}
+								className='border-b-2 border-b-white'
+							/>
+							{errors.name && <span>This field is required</span>}
+							<label className='pt-3'>Email</label>
+							<input
+								{...register('email')}
+								className='border-b-2 border-b-white'
+							/>
+							{errors.email && <span>This field is required</span>}
+							<label className='pt-3'>Message</label>
+							<input
+								{...register('message')}
+								className='border-b-2 border-b-white'
+							/>
+							{errors.message && <span>This field is required</span>}
+							<input
+								type='submit'
+								className='cursor-pointer rounded-none py-2 px-3 bg-orange-500 border-2 border-orange-500 text-black dark:text-white hover:bg-transparent md:self-start  mt-4 md:w-[]'
+							/>
+						</form>
+					</div>
+				</div>
 			</section>
 			<section
 				id='footer'
