@@ -45,17 +45,17 @@ export function Header() {
 					<NavigationMenuList className='md:ml-12 flex flex-col md:flex-row gap-4  dark:text-white'>
 						<NavigationMenuItem>
 							<NavigationMenuLink asChild>
-								<Link href='/about'>About</Link>
+								<Link href='/'>About</Link>
 							</NavigationMenuLink>
 						</NavigationMenuItem>
 						<NavigationMenuItem>
 							<NavigationMenuLink asChild>
-								<Link href='/projects'>Projects</Link>
+								<Link href='/'>Projects</Link>
 							</NavigationMenuLink>
 						</NavigationMenuItem>
 						<NavigationMenuItem>
 							<NavigationMenuLink asChild>
-								<Link href='/contact'>Contact</Link>
+								<Link href='/'>Contact</Link>
 							</NavigationMenuLink>
 						</NavigationMenuItem>
 					</NavigationMenuList>

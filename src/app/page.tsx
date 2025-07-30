@@ -84,7 +84,7 @@ export default function Home() {
 					/>
 				</div>
 			</div>
-			<div className='bg-[#fcddca] dark:bg-[#17232d] text-lg font-bold font-montserrat py-5 px-8 md:px-20 h-auto'>
+			<div className='bg-[#fcddca] dark:bg-[#17232d] text-lg font-bold font-montserrat py-5 px-8 md:px-20 h-auto '>
 				<ul className='grid grid-cols-4 sm:grid-cols-2 md:flex md:justify-between gap-4 md:gap-0 text-center md:text-left'>
 					<li>HTML5</li>
 					<li>CSS3</li>
@@ -96,13 +96,113 @@ export default function Home() {
 					<li>Github</li>
 				</ul>
 			</div>
-			{/* <section
+			<section
 				id='about'
-				className=''
+				className='flex flex-col-reverse md:flex-row gap-10 md:gap-0 justify-center items-center px-8 md:px-20 py-8 md:py-10 dark:bg-[#0f172a]'
 			>
-				<div></div>
-				<div></div>
-			</section> */}
+				<div className='flex flex-col md:flex-row justify-center items-center  w-[100%] md:w-1/2 h-[40dvh] '>
+					<div className='flex md:flex-col items-center justify-center mr-0 md:mr-10 pb-2 md:pb-0'>
+						<div className='border-3 w-[4rem] md:w-0 md:h-[4rem] bg-orange-500'></div>
+						<div className='border-5 bg-orange-500 rounded-full mx-1 md:my-1 '></div>
+						<div className='border-3 w-[4rem] md:w-0 md:h-[4rem] bg-orange-500'></div>
+						<div className='border-5 bg-orange-500 rounded-full mx-1 md:my-1 '></div>
+						<div className='border-3 w-[4rem] md:w-0 md:h-[4rem] bg-orange-500'></div>
+					</div>
+					<div className='flex flex-col justify-between items-center md:items-start  h-[14rem] w-1/1'>
+						<div className='flex gap-2  items-center'>
+							<div className='cursor-pointer flex justify-center items-center rounded-full h-10 w-10 bg-[#0f172a] dark:bg-white'>
+								<Link
+									target='_blank'
+									href='https://www.github.com/Fayorr'
+								>
+									<Github
+										size={18}
+										className='text-white dark:text-[#0f172a] '
+									/>
+								</Link>
+							</div>
+							<p className='font-montserrat font-semibold'>
+								Website Development
+							</p>
+						</div>
+						<div className='flex gap-2 items-center'>
+							<div className='cursor-pointer flex justify-center items-center rounded-full h-10 w-10 bg-[#0f172a] dark:bg-white'>
+								<Link
+									target='_blank'
+									href='https://www.github.com/Fayorr'
+								>
+									<Github
+										size={18}
+										className='text-white dark:text-[#0f172a] '
+									/>
+								</Link>
+							</div>
+							<p className='font-montserrat font-semibold'>
+								Frontend Engineering
+							</p>
+						</div>
+						<div className='flex gap-2 items-center'>
+							<div className='cursor-pointer flex justify-center items-center rounded-full h-10 w-10 bg-[#0f172a] dark:bg-white'>
+								<Link
+									target='_blank'
+									href='https://www.github.com/Fayorr'
+								>
+									<Github
+										size={18}
+										className='text-white dark:text-[#0f172a] '
+									/>
+								</Link>
+							</div>
+							<p className='font-montserrat font-semibold'>
+								Web App Development
+							</p>
+						</div>
+					</div>
+				</div>
+				<div className='md:w-1/2 flex flex-col justify-between  md:h-[20rem] text-center md:text-left'>
+					<h2 className='font-open-sans text-4xl md:text-5xl font-bold text-black dark:text-white '>
+						About Me
+					</h2>
+					<p className='font-montserrat py-10'>
+						I started my software journey from graphics design. Through that, i
+						learned to love the process of creating from scratch. Since then,
+						this has led me to software development as it fufils my love for
+						learning and building things.
+					</p>
+					<div className='flex justify-between gap-2 md:gap-20'>
+						<div>
+							<h3 className='font-open-sans text-3xl md:text-4xl font-bold text-black dark:text-white'>
+								120 <span className='text-orange-500'>+</span>
+							</h3>
+							<p>
+								Completed
+								<br />
+								Projects
+							</p>
+						</div>
+						<div>
+							<h3 className='font-open-sans text-3xl md:text-4xl font-bold text-black dark:text-white'>
+								95 <span className='text-orange-500'>%</span>
+							</h3>
+							<p>
+								Client
+								<br />
+								satisfaction
+							</p>
+						</div>
+						<div>
+							<h3 className='font-open-sans text-3xl md:text-4xl font-bold text-black dark:text-white'>
+								3 <span className='text-orange-500'>+</span>
+							</h3>
+							<p>
+								Years of
+								<br />
+								experience
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
 			<section
 				id='contact'
 				className=''
@@ -113,7 +213,7 @@ export default function Home() {
 							<p className='flex justify-center items-center text-1xl font-bold text-orange-500'>
 								______
 							</p>
-							<p className='text-black dark:text-white text-2xl font-bold md:text-4xl'>
+							<p className='text-black dark:text-white text-2xl md:text-2xl'>
 								Contact
 							</p>
 						</div>
@@ -161,7 +261,7 @@ export default function Home() {
 				<div className='flex flex-col items-center justify-between dark:bg-[#17232d] py-8 h-[calc(100vh/3)]'>
 					<h2 className='font-[montserrat] text-lg'>Fayokunmi Osho</h2>
 					<p>Designed with love, all rights reserved.</p>
-					<div className='flex justify-between w-[calc(100vw/3)] md:w-[calc(100vw/7)]'>
+					<div className='flex justify-between sm:w-[calc(100vw/2)] w-[calc(100vw/3)] md:w-[calc(100vw/7)]'>
 						<div className='cursor-pointer flex justify-center items-center rounded-full h-12 w-12 bg-[#0f172a] dark:bg-white'>
 							<Link
 								target='_blank'
@@ -198,25 +298,6 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			{/* <div className='grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] dark:bg-[#0f172a]'>
-				<main className='flex flex-col gap-[32px] row-start-2 justify-center items-center sm:items-center font-montserrat'>
-					<h1 className='text-4xl font-bold text-center'>
-						Portfolio Coming Soon!
-					</h1>
-					<Button
-						className='cursor-pointer'
-						variant='outline'
-						asChild
-					>
-						<Link
-							target='_blank'
-							href='https://github.com/Fayorr'
-						>
-							Go to Github
-						</Link>
-					</Button>
-				</main> 
-			</div> */}
 		</>
 	);
 }
