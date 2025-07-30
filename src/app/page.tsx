@@ -85,7 +85,7 @@ export default function Home() {
 				</div>
 			</div>
 			<div className='bg-[#fcddca] dark:bg-[#17232d] text-lg font-bold font-montserrat py-5 px-8 md:px-20 h-auto '>
-				<ul className='grid grid-cols-4 sm:grid-cols-2 md:flex md:justify-between gap-4 md:gap-0 text-center md:text-left'>
+				<ul className='grid grid-cols-3 sm:grid-cols-4 md:flex md:justify-between gap-8 md:gap-0 text-center md:text-left'>
 					<li>HTML5</li>
 					<li>CSS3</li>
 					<li>JavaScript</li>
@@ -98,7 +98,7 @@ export default function Home() {
 			</div>
 			<section
 				id='about'
-				className='flex flex-col-reverse md:flex-row gap-4 md:gap-0 justify-center items-center px-8 md:px-20 py-18  md:py-30 dark:bg-[#0f172a]'
+				className='flex flex-col-reverse md:flex-row gap-14 md:gap-0 justify-center items-center px-8 md:px-20 py-18  md:py-30 dark:bg-[#0f172a]'
 			>
 				<div className='flex flex-col md:flex-row justify-center items-center  w-[100%] md:w-1/2 h-[40dvh] gap-10 md:gap-0'>
 					<div className='flex md:flex-col items-center justify-center mr-0 md:mr-10 pb-2 md:pb-0'>
@@ -258,10 +258,10 @@ export default function Home() {
 			>
 				{/* <br />
 				<br /> */}
-				<div className='flex flex-col items-center justify-between dark:bg-[#17232d] py-8 h-[calc(100vh/4)] md:h-[calc(100vh/3)]'>
-					<h2 className='font-[montserrat] text-lg'>Fayokunmi Osho</h2>
-					<p>Designed with love, all rights reserved.</p>
-					<div className='flex justify-between items-center w-[40vw] md:w-[calc(100vw/7)] '>
+				<div className='flex flex-col items-center justify-between dark:bg-[#17232d] py-8  '>
+					<h2 className='font-[montserrat] text-lg py-1'>Fayokunmi Osho</h2>
+					<p className='py-8'>Designed with love, all rights reserved.</p>
+					<div className='flex justify-between items-center w-[45vw] md:w-[calc(100vw/7)] '>
 						<div className='cursor-pointer flex justify-center items-center rounded-full h-12 w-12 bg-[#0f172a] dark:bg-white'>
 							<Link
 								target='_blank'
