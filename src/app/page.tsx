@@ -7,6 +7,7 @@ import './globals.css';
 import { useForm, SubmitHandler } from 'react-hook-form';
 
 import { Header } from '@/components/Header';
+import ProjectsSection from '@/components/data/Projects';
 
 export default function Home() {
 	interface IFormInput {
@@ -203,9 +204,10 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
-			{/* <section>
-				<h2>Projects</h2>
-			</section> */}
+
+			<ProjectsSection />
+			
+
 			<section
 				id='contact'
 				className=''
