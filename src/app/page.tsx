@@ -261,7 +261,7 @@ export default function Home() {
 				<div className='flex flex-col items-center justify-between dark:bg-[#17232d] py-8 h-[calc(100vh/3)]'>
 					<h2 className='font-[montserrat] text-lg'>Fayokunmi Osho</h2>
 					<p>Designed with love, all rights reserved.</p>
-					<div className='flex justify-between sm:w-[65vw] w-[calc(100vw/3)] md:w-[calc(100vw/7)]'>
+					<div className='flex justify-between  w-[calc(100vw/2)] md:w-[calc(100vw/7)]'>
 						<div className='cursor-pointer flex justify-center items-center rounded-full h-12 w-12 bg-[#0f172a] dark:bg-white'>
 							<Link
 								target='_blank'
