@@ -25,7 +25,7 @@ export default function Home() {
 		<>
 			<Header />
 			<div className='flex flex-col md:flex-row items-center justify-center  px-8 md:px-20 mt-20 md:mt-20 pt-10 md:pt-12 font-[Montserrat] dark:bg-[#0f172a]'>
-				<div className='flex flex-col items-center md:items-start mt-13 md:mt-5  justify-center min-h-auto p-0  gap-8 md:gap-14 md:p-0 w-[100%] md:w-1/2 '>
+				<div className='flex flex-col items-center md:items-start mt-4 md:mt-5  justify-center min-h-auto p-0  gap-8 md:gap-14 md:p-0 w-[100%] md:w-1/2 '>
 					<h2 className='font-montserrat  md:text-4xl text-2xl font-bold dark:text-white text-black'>
 						Hello<span className='text-orange-500'>.</span>
 					</h2>
@@ -37,7 +37,7 @@ export default function Home() {
 							I&apos;m Fayo
 						</p>
 					</div>
-					<h2 className='text-4xl md:text-5xl font-bold text-black dark:text-white'>
+					<h2 className='text-3xl md:text-5xl font-bold text-black dark:text-white'>
 						Software Developer
 					</h2>
 					<div className='flex flex-row gap-2'>
@@ -98,9 +98,9 @@ export default function Home() {
 			</div>
 			<section
 				id='about'
-				className='flex flex-col-reverse md:flex-row gap-10 md:gap-0 justify-center items-center px-8 md:px-20 py-8 md:py-10 dark:bg-[#0f172a]'
+				className='flex flex-col-reverse md:flex-row gap-4 md:gap-0 justify-center items-center px-8 md:px-20 py-18  md:py-30 dark:bg-[#0f172a]'
 			>
-				<div className='flex flex-col md:flex-row justify-center items-center  w-[100%] md:w-1/2 h-[40dvh] '>
+				<div className='flex flex-col md:flex-row justify-center items-center  w-[100%] md:w-1/2 h-[40dvh] gap-10 md:gap-0'>
 					<div className='flex md:flex-col items-center justify-center mr-0 md:mr-10 pb-2 md:pb-0'>
 						<div className='border-3 w-[4rem] md:w-0 md:h-[4rem] bg-orange-500'></div>
 						<div className='border-5 bg-orange-500 rounded-full mx-1 md:my-1 '></div>
@@ -207,7 +207,7 @@ export default function Home() {
 				id='contact'
 				className=''
 			>
-				<div className='flex flex-col md:flex-row items-center justify-center  px-8 md:px-20 py-20 md:py-30  md:pt-12 font-[Montserrat] dark:bg-[#0f172a]'>
+				<div className='flex flex-col md:flex-row items-center justify-center  px-8 md:px-20  pb-20 md:py-30  md:pt-12 font-[Montserrat] dark:bg-[#0f172a]'>
 					<div className='flex flex-col items-center md:items-start mt-13 md:mt-5  justify-center min-h-auto p-0  gap-8 md:gap-14 md:p-0 w-[100%] md:w-1/2 '>
 						<div className='flex md:flex-row flex-col-reverse gap-0 '>
 							<p className='flex justify-center items-center text-1xl font-bold text-orange-500'>
@@ -258,10 +258,10 @@ export default function Home() {
 			>
 				{/* <br />
 				<br /> */}
-				<div className='flex flex-col items-center justify-between dark:bg-[#17232d] py-8 h-[calc(100vh/3)]'>
+				<div className='flex flex-col items-center justify-between dark:bg-[#17232d] py-8 h-[calc(100vh/4)] md:h-[calc(100vh/3)]'>
 					<h2 className='font-[montserrat] text-lg'>Fayokunmi Osho</h2>
 					<p>Designed with love, all rights reserved.</p>
-					<div className='flex justify-between  w-[calc(100vw/2)] md:w-[calc(100vw/7)]'>
+					<div className='flex justify-between items-center w-[40vw] md:w-[calc(100vw/7)] '>
 						<div className='cursor-pointer flex justify-center items-center rounded-full h-12 w-12 bg-[#0f172a] dark:bg-white'>
 							<Link
 								target='_blank'
