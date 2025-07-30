@@ -78,22 +78,22 @@ export default function Home() {
 					<Image
 						src='/images/porfolioPicDark.png'
 						alt='Fayo'
-						width={550}
-						height={550}
+						width={650}
+						height={650}
 						className='hidden dark:block'
 					/>
 				</div>
 			</div>
 			<div className='bg-[#fcddca] dark:bg-[#17232d] text-lg font-bold font-montserrat py-5 px-8 md:px-20 h-auto '>
-				<ul className='grid grid-cols-3 sm:grid-cols-4 md:flex md:justify-between gap-8 md:gap-0 text-center md:text-left'>
-					<li>HTML5</li>
-					<li>CSS3</li>
-					<li>JavaScript</li>
-					<li>React</li>
-					<li>Next.js</li>
-					<li>TypeScript</li>
-					<li>Git</li>
-					<li>Github</li>
+				<ul className='grid grid-cols-3 sm:grid-cols-4 md:flex md:justify-between gap-4 md:gap-0 text-center md:text-left'>
+					<li className='flex justify-start'>HTML5</li>
+					<li className='flex justify-start'>CSS3</li>
+					<li className='flex justify-start'>JavaScript</li>
+					<li className='flex justify-start'>React</li>
+					<li className='flex justify-start'>Next.js</li>
+					<li className='flex justify-start'>TypeScript</li>
+					<li className='flex justify-start'>Git</li>
+					<li className='flex justify-start'>Github</li>
 				</ul>
 			</div>
 			<section
