@@ -84,7 +84,7 @@ export default function Home() {
 					/>
 				</div>
 			</div>
-			<div className='bg-[#fcddca] dark:bg-[#17232d] text-lg font-bold font-montserrat py-5 px-8 md:px-20 h-auto '>
+			<section className='bg-[#fcddca] dark:bg-[#17232d] text-lg font-bold font-montserrat py-5 px-8 md:px-20 h-auto '>
 				<ul className='grid grid-cols-3 sm:grid-cols-4 md:flex md:justify-between gap-4 md:gap-0 text-center md:text-left'>
 					<li className='flex justify-start'>HTML5</li>
 					<li className='flex justify-start'>CSS3</li>
@@ -95,7 +95,7 @@ export default function Home() {
 					<li className='flex justify-start'>Git</li>
 					<li className='flex justify-start'>Github</li>
 				</ul>
-			</div>
+			</section>
 			<section
 				id='about'
 				className='flex flex-col-reverse md:flex-row gap-14 md:gap-0 justify-center items-center px-8 md:px-20 py-18  md:py-30 dark:bg-[#0f172a]'
@@ -169,7 +169,7 @@ export default function Home() {
 						this has led me to software development as it fufils my love for
 						learning and building things.
 					</p>
-					<div className='flex justify-between gap-2 md:gap-20'>
+					<div className='flex justify-center md:justify-start gap-15 md:gap-30'>
 						<div>
 							<h3 className='font-open-sans text-3xl md:text-4xl font-bold text-black dark:text-white'>
 								120 <span className='text-orange-500'>+</span>
@@ -203,6 +203,9 @@ export default function Home() {
 					</div>
 				</div>
 			</section>
+			{/* <section>
+				<h2>Projects</h2>
+			</section> */}
 			<section
 				id='contact'
 				className=''
