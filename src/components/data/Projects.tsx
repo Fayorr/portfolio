@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const ProjectsSection: React.FC = () => {
 	return (
-		<section className='min-h-screen bg-slate-900 py-20 px-6'>
+		<section className='min-h-screen bg-slate-900 py-20 px-20'>
 			<div className='max-w-6xl mx-auto'>
 				{/* Section Header */}
 				<div className='text-center mb-16'>
