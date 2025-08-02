@@ -8,6 +8,7 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 
 import { Header } from '@/components/Header';
 import ProjectsSection from '@/components/data/Projects';
+import GithubCalender from '@/components/GithubCalender';
 
 export default function Home() {
 	interface IFormInput {
@@ -206,7 +207,7 @@ export default function Home() {
 			</section>
 
 			<ProjectsSection />
-			
+			<GithubCalender />
 
 			<section
 				id='contact'
