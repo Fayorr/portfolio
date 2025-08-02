@@ -18,7 +18,7 @@ export default function GithubCalender() {
 					blockSize={13}
 				/>
 			</div>
-			<div className=' flex md:flex-col flex-row justify-start md:justify-between  items-center gap-4 '>
+			<div className=' flex md:flex-col flex-row justify-start md:justify-between  items-center gap-4 flex-wrap '>
 				{years.map((yearValue: number, index: number) => (
 					<div
 						key={index}
