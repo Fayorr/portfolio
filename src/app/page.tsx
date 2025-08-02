@@ -264,7 +264,7 @@ export default function Home() {
 			>
 				{/* <br />
 				<br /> */}
-				<div className='flex flex-col items-center justify-between dark:bg-[#17232d] py-8  '>
+				<div className='flex flex-col items-center justify-between bg-[#fcddca] dark:bg-[#17232d] py-8  '>
 					<h2 className='font-[montserrat] text-lg py-1'>Fayokunmi Osho</h2>
 					<p className='py-8'>Designed with love, all rights reserved.</p>
 					<div className='flex justify-between items-center w-[45vw] md:w-[calc(100vw/7)] '>

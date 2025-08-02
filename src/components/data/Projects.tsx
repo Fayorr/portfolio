@@ -4,11 +4,11 @@ import Image from 'next/image';
 
 const ProjectsSection: React.FC = () => {
 	return (
-		<section className='min-h-screen bg-slate-900 py-20 px-20'>
+		<section className='min-h-screen dark:bg-slate-900 py-20 px-8 md:px-20 '>
 			<div className='max-w-6xl mx-auto'>
 				{/* Section Header */}
 				<div className='text-center mb-16'>
-					<h2 className='text-4xl font-bold text-white mb-4'>Projects</h2>
+					<h2 className='text-4xl font-bold dark:text-white  mb-4'>Projects</h2>
 					<div className='w-px h-8 bg-orange-500 mx-auto'></div>
 				</div>
 
@@ -33,7 +33,7 @@ const ProjectsSection: React.FC = () => {
 										{project.skills.map((skill, skillIndex) => (
 											<span
 												key={skillIndex}
-												className='px-3 py-1 bg-slate-800 text-slate-300 text-sm rounded-md border border-slate-700'
+												className='px-3 py-1 bg-[#fcddca] dark:bg-slate-800 dark:text-slate-300 text-sm rounded-md border dark:border-slate-700'
 											>
 												{skill}
 											</span>
@@ -41,7 +41,7 @@ const ProjectsSection: React.FC = () => {
 									</div>
 
 									{/* Description */}
-									<p className='text-slate-300 leading-relaxed text-lg'>
+									<p className='text-[#0f172a] dark:text-slate-300 leading-relaxed text-lg'>
 										{project.description}
 									</p>
 								</div>
@@ -60,7 +60,9 @@ const ProjectsSection: React.FC = () => {
 										href={project.liveLink}
 										target='_blank'
 										rel='noopener noreferrer'
-										className='px-6 py-3 border border-slate-600 hover:border-slate-500 text-slate-300 hover:text-white font-semibold rounded-lg transition-colors duration-200 flex items-center gap-2'
+										className='px-6 py-3 border border-slate-600 
+										hover:text-[#36415b]
+										dark:text-slate-300  font-semibold rounded-lg transition-colors duration-200 flex items-center gap-2'
 									>
 										View project
 										<svg
@@ -82,13 +84,13 @@ const ProjectsSection: React.FC = () => {
 
 							{/* Project Image */}
 							<div className='flex-1 max-w-lg'>
-								<div className='bg-slate-800 rounded-lg p-4 border border-slate-700'>
+								<div className='bg-[#ea6a1b]dark:bg-slate-800 rounded-lg p-4 border border-slate-700'>
 									<Image
 										src={project.image}
 										alt={project.name}
 										width={500}
 										height={300}
-										className='w-full h-64 object-cover rounded-lg'
+										className=' w-full h-64 object-cover rounded-lg'
 									/>
 								</div>
 							</div>
