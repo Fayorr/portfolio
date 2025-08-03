@@ -67,6 +67,7 @@ export default function RootLayout({
 				>
 					{children}
 				</ThemeProvider>
+			<div id='particles-js'></div>
 			</body>
 		</html>
 	);

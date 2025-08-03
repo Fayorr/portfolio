@@ -17,6 +17,7 @@ const page = () => {
 	const onSubmit: SubmitHandler<IFormInput> = (data) => console.log(data);
 	return (
 		<div className='w-full flex flex-col md:flex-row items-center justify-center  px-8 pt-20 md:px-20  pb-20 md:py-35  font-[Montserrat] dark:bg-[#0f172a] m-0'>
+			<div id='particles-js'></div>
 			<div className='flex flex-col items-center md:items-start pt-13 md:pt-5  justify-center min-h-auto p-0  gap-8 md:gap-14 md:p-0 w-[100%] md:w-1/2 '>
 				<div className='flex md:flex-row flex-col-reverse gap-0 '>
 					<p className='flex justify-center items-center text-1xl font-bold text-orange-500'>
