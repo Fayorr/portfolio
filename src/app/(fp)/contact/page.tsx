@@ -2,7 +2,7 @@
 import React from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 
-const page = () => {
+const Contact = () => {
 	interface IFormInput {
 		name: string;
 		email: string;
@@ -64,4 +64,4 @@ const page = () => {
 	);
 };
 
-export default page;
+export default Contact;
