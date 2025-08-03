@@ -1,4 +1,5 @@
 import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 
 export default async function RSLayout({
 	children,
@@ -9,7 +10,8 @@ export default async function RSLayout({
 		<div className='mx-auto w-full max-w-7xl'>
 			<Header />
 			{/* Main Content */}
-			<div className='px-4 py-2'>{children}</div>
+			<div>{children}</div>
+			<Footer />
 		</div>
 	);
 }
