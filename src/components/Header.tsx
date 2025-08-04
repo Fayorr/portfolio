@@ -16,7 +16,7 @@ import { useState } from 'react';
 export function Header() {
 	const [toggle, setToggle] = useState(false);
 	return (
-		<header className='flex justify-between items-center py-7 px-10 md:px-20 bg-[#ffffff] dark:bg-[#0f172a]  border-b-2 border-orange-500 fixed top-0 left-0 right-0 z-50'>
+		<header className='flex justify-between items-center py-7 px-10 md:px-20 bg-[#ffffff] dark:bg-[#0f172a]  border-b-2 border-orange-500 fixed top-0 left-0 right-0 z-10'>
 			<div>
 				<Link href='/'>
 					<h1 className='text-2xl font-bold uppercase cursor-pointer'>Fayo</h1>

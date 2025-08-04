@@ -7,7 +7,7 @@ export const Footer = () => {
 	return (
 		<footer
 			id='footer'
-			className=''
+			className='relative z-10'
 		>
 			{/* <br />
 				<br /> */}
