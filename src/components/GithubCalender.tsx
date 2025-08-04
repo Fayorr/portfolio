@@ -9,7 +9,7 @@ export default function GithubCalender() {
 	const [year, setYear] = useState(2025);
 	return (
 		<div className='pb-20 dark:bg-[#0f172a]'>
-			<div className='px-8 md:px-20 w-full h-full  dark:bg-[#0f172a] gap-4 md:gap-0 text-3xl md:text-4xl font-montserrat font-bold pb-6'>
+			<div className='px-8 md:px-20 w-full h-full  dark:bg-[#0f172a] gap-4 md:gap-0 text-3xl md:text-4xl font-montserrat font-bold pt-10 pb-6'>
 				<h2>My GitHub Contributions</h2>
 			</div>
 			<div className='px-8 md:px-20 w-full h-full flex flex-col md:flex-row justify-between md:items-center dark:bg-[#0f172a] gap-4 md:gap-0'>
