@@ -8,21 +8,12 @@ import './globals.css';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import GithubCalender from '@/components/GithubCalender';
-// import Particles from 'react-tsparticles';
-// import { loadFull } from 'tsparticles';
-// import particlesConfig from '../../particles-config.js';
+import { ParticleBackground } from '@/components/ui/ParticleBackground';
 
 export default function Home() {
-	//  const particlesInit = async (main) => {
-	// 		await loadFull(main);
-	// 	};
 	return (
 		<>
-			{/* <Particles
-				id='tsparticles'
-				init={particlesInit}
-				options={particlesConfig} 
-			/> */}
+			<ParticleBackground />
 			<Header />
 			<div className='flex flex-col md:flex-row items-center justify-center  px-8 md:px-20 mt-20 md:mt-20 pt-10 md:pt-12 font-[Montserrat] dark:bg-[#0f172a]'>
 				<div className='flex flex-col items-center md:items-start mt-4 md:mt-5  justify-center min-h-auto p-0  gap-8 md:gap-14 md:p-0 w-[100%] md:w-1/2 '>

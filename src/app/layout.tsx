@@ -3,6 +3,7 @@ import { Montserrat, Open_Sans, Roboto } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 
+
 const montserrat = Montserrat({
 	variable: '--font-montserrat',
 	subsets: ['latin'],
@@ -65,9 +66,9 @@ export default function RootLayout({
 					enableSystem
 					disableTransitionOnChange
 				>
+					
 					{children}
 				</ThemeProvider>
-			<div id='particles-js'></div>
 			</body>
 		</html>
 	);

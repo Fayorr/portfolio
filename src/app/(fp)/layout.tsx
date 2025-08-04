@@ -1,5 +1,6 @@
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { ParticleBackground } from '@/components/ui/ParticleBackground';
 
 export default async function RSLayout({
 	children,
@@ -8,6 +9,7 @@ export default async function RSLayout({
 }) {
 	return (
 		<div className='mx-auto w-full max-w-7xl'>
+			<ParticleBackground />
 			<Header />
 			{/* Main Content */}
 			<div>{children}</div>
