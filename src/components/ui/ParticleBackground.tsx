@@ -15,7 +15,7 @@ import { loadSlim } from '@tsparticles/slim'; // if you are going to use `loadSl
 
 export const ParticleBackground = () => {
 	const [init, setInit] = useState(false);
-	const { theme } = useTheme();
+	const { resolvedTheme } = useTheme();
 
 	// this should be run only once per application lifetime
 	useEffect(() => {
@@ -67,13 +67,13 @@ export const ParticleBackground = () => {
 			},
 			particles: {
 				color: {
-					value: theme === 'dark' ? '#ffffff' : '#000000',
+					value: resolvedTheme === 'dark' ? '#ffffff' : '#000000',
 				},
 				links: {
-					color: theme === 'dark' ? '#ffffff' : '#000000',
+					color: resolvedTheme === 'dark' ? '#ffffff' : '#000000',
 					distance: 150,
 					enable: true,
-					opacity: 1,
+					opacity: 0.5,
 					width: 1,
 				},
 				move: {
@@ -90,10 +90,10 @@ export const ParticleBackground = () => {
 					density: {
 						enable: true,
 					},
-					value: 80,
+					value: 100,
 				},
 				opacity: {
-					value: 0.4,
+					value: 0.3,
 				},
 				shape: {
 					type: 'circle',
@@ -104,7 +104,7 @@ export const ParticleBackground = () => {
 			},
 			detectRetina: true,
 		}),
-		[theme]
+		[resolvedTheme]
 	);
 
 	if (init) {
