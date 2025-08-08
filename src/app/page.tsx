@@ -1,7 +1,6 @@
 'use client';
 import Link from 'next/link';
 import Image from 'next/image';
-// import { Github } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import './globals.css';
 
@@ -76,7 +75,7 @@ export default function Home() {
 				</div>
 			</div>
 			<section className='bg-[#fcddca] dark:bg-[#17232d] text-lg font-bold font-montserrat py-5 px-8 md:px-20 h-auto '>
-				<ul className='grid grid-cols-3 sm:grid-cols-4 md:flex md:justify-between gap-4 md:gap-0 text-center md:text-left'>
+				<ul className='relative z-30  grid grid-cols-3 sm:grid-cols-4 md:flex md:justify-between gap-4 md:gap-0 text-center md:text-left'>
 					<li className='flex justify-start'>HTML5</li>
 					<li className='flex justify-start'>CSS3</li>
 					<li className='flex justify-start'>JavaScript</li>
