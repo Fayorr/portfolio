@@ -48,7 +48,7 @@ export default function Home() {
 						>
 							<Link
 								target='_blank'
-								href='https://www.linkedin.com/in/fayokunmi-osho'
+								href='https://drive.google.com/file/d/1uIj0rKRT1Oo3wyFKA_f1ZNXNiYVP1WJU/view?usp=sharing'
 							>
 								My resume
 							</Link>
@@ -86,7 +86,7 @@ export default function Home() {
 					<li className='flex justify-start'>Github</li>
 				</ul>
 			</section>
-			
+
 			<GithubCalender />
 			<Footer />
 		</>
