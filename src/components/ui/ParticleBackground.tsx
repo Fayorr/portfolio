@@ -73,7 +73,7 @@ export const ParticleBackground = () => {
 					color: resolvedTheme === 'dark' ? '#ffffff' : '#000000',
 					distance: 150,
 					enable: true,
-					opacity: 0.5,
+					opacity: 0.3,
 					width: 1,
 				},
 				move: {
@@ -93,13 +93,13 @@ export const ParticleBackground = () => {
 					value: 100,
 				},
 				opacity: {
-					value: 0.3,
+					value: 0.25,
 				},
 				shape: {
 					type: 'circle',
 				},
 				size: {
-					value: { min: 1, max: 5 },
+					value: { min: 0.5, max: 4 },
 				},
 			},
 			detectRetina: true,

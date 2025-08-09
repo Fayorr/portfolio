@@ -5,7 +5,7 @@ const About = () => {
 	return (
 		<section
 			id='about'
-			className='flex flex-col-reverse md:flex-row gap-14 md:gap-0 justify-center items-center px-8 md:px-20 py-18  md:py-30 dark:bg-[#0f172a]'
+			className='flex flex-col-reverse md:flex-row gap-14 md:gap-0 justify-center items-center px-8 md:px-20 py-18  md:py-40 dark:bg-[#0f172a]'
 		>
 			<div className='flex flex-col md:flex-row justify-center items-center  w-[100%] md:w-1/2 h-[40dvh] gap-10 md:gap-0'>
 				<div className='flex md:flex-col items-center justify-center mr-0 md:mr-10 pb-2 md:pb-0'>
@@ -75,7 +75,7 @@ const About = () => {
 				<div className='flex justify-center md:justify-start gap-15 md:gap-30'>
 					<div>
 						<h3 className='font-open-sans text-3xl md:text-4xl font-bold text-black dark:text-white'>
-							120 <span className='text-orange-500'>+</span>
+							50 <span className='text-orange-500'>+</span>
 						</h3>
 						<p>
 							Completed
