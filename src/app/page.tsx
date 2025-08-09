@@ -28,7 +28,7 @@ export default function Home() {
 						</p>
 					</div>
 					<h2 className='text-3xl md:text-5xl font-bold text-black dark:text-white'>
-						Software Developer
+						Frontend Developer
 					</h2>
 					<div className='flex flex-row gap-2'>
 						<Button
