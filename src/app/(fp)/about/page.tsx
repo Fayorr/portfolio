@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 import { Github } from 'lucide-react';
 const About = () => {
@@ -28,7 +27,9 @@ const About = () => {
 								/>
 							</Link>
 						</div>
-						<p className='font-montserrat font-semibold'>Website Development</p>
+						<p className='font-montserrat font-semibold'>
+							Website Development.
+						</p>
 					</div>
 					<div className='flex gap-2 items-center'>
 						<div className='cursor-pointer flex justify-center items-center rounded-full h-10 w-10 bg-[#0f172a] dark:bg-white'>
