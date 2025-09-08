@@ -28,7 +28,7 @@ const About = () => {
 							</Link>
 						</div>
 						<p className='font-montserrat font-semibold'>
-							Website Development
+							Website Development.
 						</p>
 					</div>
 					<div className='flex gap-2 items-center'>
