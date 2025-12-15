@@ -1,6 +1,7 @@
+'use client';
 import React, { useState } from 'react';
 
-import GitHubCalendar from 'react-github-calendar';
+import { GitHubCalendar } from 'react-github-calendar';
 import YearButton from './YearButton';
 
 const years: number[] = [2025, 2024, 2023, 2022];

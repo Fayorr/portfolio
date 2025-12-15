@@ -3,7 +3,6 @@ import { Montserrat, Open_Sans, Roboto } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 
-
 const montserrat = Montserrat({
 	variable: '--font-montserrat',
 	subsets: ['latin'],
@@ -62,11 +61,12 @@ export default function RootLayout({
 			>
 				<ThemeProvider
 					attribute='class'
-					defaultTheme='system'
+					defaultTheme='dark'
 					enableSystem
 					disableTransitionOnChange
+					// storageKey='theme-preference'
+					// enableColorScheme={false}
 				>
-					
 					{children}
 				</ThemeProvider>
 			</body>
