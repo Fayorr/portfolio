@@ -4,7 +4,7 @@ const About = () => {
 	return (
 		<section
 			id='about'
-			className='flex flex-col-reverse md:flex-row gap-14 md:gap-0 justify-center items-center px-8 md:px-20 py-18  md:py-40 dark:bg-[#0f172a]'
+			className='flex flex-col-reverse md:flex-row gap-14 md:gap-0 justify-center items-center px-8 md:px-20 py-18  md:py-40 dark:bg-[#0f172a] pt-40'
 		>
 			<div className='flex flex-col md:flex-row justify-center items-center  w-[100%] md:w-1/2 h-[40dvh] gap-10 md:gap-0'>
 				<div className='flex md:flex-col items-center justify-center mr-0 md:mr-10 pb-2 md:pb-0'>

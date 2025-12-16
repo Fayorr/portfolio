@@ -11,7 +11,7 @@ import { ParticleBackground } from '@/components/ui/ParticleBackground';
 
 export default function Home() {
 	return (
-		<>
+		<div className='mx-auto w-full max-w-7xl dark:bg-[#0f172a]'>
 			<ParticleBackground />
 			<Header />
 			<div className='flex flex-col md:flex-row items-center justify-center  px-8 md:px-20 mt-20 md:mt-20 pt-10 md:pt-12 font-[Montserrat] dark:bg-[#0f172a]'>
@@ -75,7 +75,7 @@ export default function Home() {
 				</div>
 			</div>
 			<section className='bg-[#fcddca] dark:bg-[#17232d] text-lg font-bold font-montserrat py-5 px-8 md:px-20 h-auto '>
-				<ul className='relative z-30  grid grid-cols-3 sm:grid-cols-4 md:flex md:justify-between gap-4 md:gap-0 text-center md:text-left'>
+				<ul className='relative z-10  grid grid-cols-3 sm:grid-cols-4 md:flex md:justify-between gap-4 md:gap-0 text-center md:text-left'>
 					<li className='flex justify-start'>HTML5</li>
 					<li className='flex justify-start'>CSS3</li>
 					<li className='flex justify-start'>JavaScript</li>
@@ -89,6 +89,6 @@ export default function Home() {
 
 			<GithubCalender />
 			<Footer />
-		</>
+		</div>
 	);
 }

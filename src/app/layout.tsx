@@ -57,15 +57,13 @@ export default function RootLayout({
 			suppressHydrationWarning
 		>
 			<body
-				className={`${montserrat.variable} ${openSans.variable} ${roboto.variable} antialiased`}
+				className={`${montserrat.variable} ${openSans.variable} ${roboto.variable} antialiased dark:bg-[#0f172a]`}
 			>
 				<ThemeProvider
 					attribute='class'
 					defaultTheme='dark'
 					enableSystem
 					disableTransitionOnChange
-					// storageKey='theme-preference'
-					// enableColorScheme={false}
 				>
 					{children}
 				</ThemeProvider>

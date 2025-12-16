@@ -11,7 +11,6 @@ export default async function RSLayout({
 		<div className='mx-auto w-full max-w-7xl'>
 			<ParticleBackground />
 			<Header />
-			{/* Main Content */}
 			<div>{children}</div>
 			<Footer />
 		</div>
