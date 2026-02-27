@@ -10,6 +10,26 @@ export interface Project {
 export const projects: Project[] = [
 	{
 		id: 1,
+		name: 'Blog API',
+		skills: ['NodeJS', 'Express', 'MongoDB', 'Rest API'],
+		description:
+			'Blog API built with Node.js and Express.js featuring user authentication, blog post management, and RESTful API endpoints. Includes MongoDB integration for data storage and deployment on Render.',
+		liveLink: 'https://blog-api-nine-liart.vercel.app/',
+		githubLink: 'https://github.com/Fayorr/blog-api',
+		image: '/images/projectImages/Blogify.png',
+	},
+	{
+		id: 2,
+		name: 'Taskflow App',
+		skills: ['ReactJS', 'TypeScript', 'NodeJS', 'Express', 'MongoDB', 'Rest API'],
+		description:
+			'Blog API built with Node.js and Express.js featuring user authentication, blog post management, and RESTful API endpoints. Includes MongoDB integration for data storage and deployment on Render.',
+		liveLink: 'https://my-todo-frontend-l8n8.onrender.com/',
+		githubLink: 'https://github.com/Fayorr/todo-app',
+		image: '/images/projectImages/taskify.png',
+	},
+	{
+		id: 3,
 		name: 'Quizzical App',
 		skills: ['ReactJS', 'TypeScript', 'Styled-Components', 'Rest API'],
 		description:
@@ -19,7 +39,7 @@ export const projects: Project[] = [
 		image: '/images/projectImages/quizzical.png',
 	},
 	{
-		id: 2,
+		id: 4,
 		name: 'Wave Music Player',
 		skills: ['ReactJS', 'SCSS', 'JavaScript', 'E-commerce'],
 		description:
@@ -29,7 +49,7 @@ export const projects: Project[] = [
 		image: '/images/projectImages/waveMusicPlayer.png',
 	},
 	{
-		id: 3,
+		id: 5,
 		name: 'Capture Portfolio',
 		skills: ['ReactJS', 'Styled-Components', 'React Router', 'Motion'],
 		description:

@@ -28,7 +28,7 @@ export default function Home() {
 						</p>
 					</div>
 					<h2 className='text-3xl md:text-5xl font-bold text-black dark:text-white'>
-						Frontend Developer
+						Software Developer
 					</h2>
 					<div className='flex flex-row gap-2'>
 						<Button
@@ -76,12 +76,13 @@ export default function Home() {
 			</div>
 			<section className='bg-[#fcddca] dark:bg-[#17232d] text-lg font-bold font-montserrat py-5 px-8 md:px-20 h-auto '>
 				<ul className='relative z-10  grid grid-cols-3 sm:grid-cols-4 md:flex md:justify-between gap-4 md:gap-0 text-center md:text-left'>
-					<li className='flex justify-start'>HTML5</li>
-					<li className='flex justify-start'>CSS3</li>
 					<li className='flex justify-start'>JavaScript</li>
-					<li className='flex justify-start'>React</li>
+					<li className='flex justify-start'>ReactJS</li>
 					<li className='flex justify-start'>Next.js</li>
 					<li className='flex justify-start'>TypeScript</li>
+					<li className='flex justify-start'>NodeJS</li>
+					<li className='flex justify-start'>ExpressJS</li>
+					<li className='flex justify-start'>MongoDB</li>
 					<li className='flex justify-start'>Git</li>
 					<li className='flex justify-start'>Github</li>
 				</ul>
