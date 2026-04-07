@@ -13,7 +13,7 @@ export const Footer = () => {
 				<br /> */}
 			<div className='flex flex-col items-center justify-between bg-[#fcddca] dark:bg-[#17232d] py-8  '>
 				<h2 className='font-[montserrat] text-lg py-1'>Fayokunmi Osho</h2>
-				<p className='py-8'>Designed with love, all rights reserved.</p>
+				<p className='py-8'>Designed with Love, All Rights Reserved.</p>
 				<div className='flex justify-between items-center w-[45vw] md:w-[calc(100vw/7)] '>
 					<div className='cursor-pointer flex justify-center items-center rounded-full h-12 w-12 bg-[#0f172a] dark:bg-white'>
 						<Link
