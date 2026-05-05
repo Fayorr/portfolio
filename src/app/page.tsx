@@ -48,7 +48,7 @@ export default function Home() {
 						>
 							<Link
 								target='_blank'
-								href='https://drive.google.com/file/d/195mFOlAe-7MNydv2GRbur7CwLPMUglgf/view?usp=sharing'
+								href='https://drive.google.com/file/d/1Urnl3Kq7PaDzEpar7CQxSAhMw8qDyaw2/view?usp=sharing'
 							>
 								My resume
 							</Link>
