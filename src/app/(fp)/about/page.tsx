@@ -68,7 +68,7 @@ const About = () => {
 					About Me
 				</h2>
 				<p className='font-montserrat py-10'>
-					I started my software journey from graphics design. Through that, i
+					I started my software journey from graphics design. Through that, I
 					learned to love the process of creating from scratch. Since then, this
 					has led me to software development as it fufils my love for learning
 					and building things.
