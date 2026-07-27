@@ -21,9 +21,16 @@ export const projects: Project[] = [
 	{
 		id: 2,
 		name: 'Taskflow App',
-		skills: ['ReactJS', 'TypeScript', 'NodeJS', 'Express', 'MongoDB', 'Rest API'],
+		skills: [
+			'ReactJS',
+			'TypeScript',
+			'NodeJS',
+			'Express',
+			'MongoDB',
+			'Rest API',
+		],
 		description:
-			'Blog API built with Node.js and Express.js featuring user authentication, blog post management, and RESTful API endpoints. Includes MongoDB integration for data storage and deployment on Render.',
+			'A full-stack task management application featuring secure JWT authentication, allowing users to privately manage their personal task lists. Built with Node.js, Express, and MongoDB on the backend and React with TypeScript on the frontend, the app supports full CRUD functionality (create, read, update, delete), completion tracking, and is deployed on Render.',
 		liveLink: 'https://my-todo-frontend-l8n8.onrender.com/',
 		githubLink: 'https://github.com/Fayorr/todo-app',
 		image: '/images/projectImages/taskify.png',
