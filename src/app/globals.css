@@ -106,15 +106,18 @@ button, input, textarea { font: inherit; }
 .social-list a { display: inline-flex; align-items: center; gap: 7px; padding-bottom: 3px; border-bottom: 1px solid var(--border); color: var(--muted); font-size: .87rem; font-weight: 600; transition: color .2s ease, border-color .2s ease; }
 .social-list a:hover { color: var(--foreground); border-color: var(--accent); }
 
-.hero-visual { position: relative; }
-.portrait-frame { position: relative; overflow: hidden; aspect-ratio: 4 / 4.55; border: 1px solid var(--border); border-radius: 180px 180px 20px 20px; background: var(--surface); box-shadow: var(--shadow); }
-.portrait-frame::after { content: ''; position: absolute; inset: 0; border: 12px solid color-mix(in srgb, var(--surface) 55%, transparent); border-radius: inherit; pointer-events: none; }
-.portrait-frame img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
-.portrait-dark { display: none; }
-.dark .portrait-light { display: none; }
-.dark .portrait-dark { display: block; }
+.hero-visual { position: relative; display: grid; gap: 18px; }
+.portrait-frame { position: relative; overflow: hidden; isolation: isolate; aspect-ratio: 4 / 4.55; border: 1px solid var(--border); border-radius: 180px 180px 20px 20px; background: var(--surface); box-shadow: var(--shadow); }
+.portrait-frame::after { content: ''; position: absolute; inset: 0; z-index: 2; border: 12px solid color-mix(in srgb, var(--surface) 55%, transparent); border-radius: inherit; pointer-events: none; }
+.portrait-slides, .portrait-slide { position: absolute; inset: 0; }
+.portrait-slide { overflow: hidden; }
+.portrait-slide img { width: 100%; height: 100%; object-fit: cover; }
 .portrait-index { position: absolute; z-index: 2; top: 24px; left: 50%; transform: translateX(-50%); padding: 7px 11px; border-radius: 999px; background: color-mix(in srgb, var(--background) 82%, transparent); color: var(--foreground); font: 700 .66rem/1 var(--font-montserrat), sans-serif; letter-spacing: .08em; white-space: nowrap; }
-.capability-card { position: absolute; right: -22px; bottom: 30px; z-index: 3; width: 240px; padding: 18px; border: 1px solid var(--border); border-radius: 16px; background: color-mix(in srgb, var(--surface) 92%, transparent); backdrop-filter: blur(14px); box-shadow: var(--shadow); }
+.carousel-controls { position: absolute; z-index: 4; left: 22px; bottom: 22px; display: flex; gap: 7px; padding: 6px; border: 1px solid color-mix(in srgb, var(--border) 75%, transparent); border-radius: 999px; background: color-mix(in srgb, var(--background) 82%, transparent); backdrop-filter: blur(14px); }
+.carousel-controls button { display: grid; place-items: center; width: 38px; height: 38px; padding: 0; border: 0; border-radius: 50%; background: transparent; color: var(--foreground); cursor: pointer; transition: color .2s ease, background .2s ease, transform .2s ease; }
+.carousel-controls button:hover { background: var(--foreground); color: var(--background); transform: scale(1.04); }
+.carousel-controls button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.capability-card { width: 100%; padding: 18px 20px; border: 1px solid var(--border); border-radius: 16px; background: color-mix(in srgb, var(--surface) 92%, transparent); backdrop-filter: blur(14px); box-shadow: 0 14px 42px color-mix(in srgb, var(--foreground) 8%, transparent); }
 .capability-card p { margin: 0 0 10px; color: var(--muted); font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
 .capability-card div { display: flex; flex-wrap: wrap; gap: 6px; }
 .capability-card span { padding: 4px 8px; border-radius: 999px; background: var(--surface-strong); font-size: .71rem; font-weight: 700; }
@@ -148,7 +151,7 @@ button, input, textarea { font: inherit; }
 	.hero-actions { align-items: stretch; }
 	.button { flex: 1; }
 	.social-list { gap: 14px; margin-top: 34px; }
-	.capability-card { right: -8px; bottom: -28px; width: 220px; }
+	.carousel-controls { left: 16px; bottom: 16px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

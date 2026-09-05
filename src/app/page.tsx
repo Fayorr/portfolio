@@ -4,6 +4,7 @@ import { ArrowDownRight, ArrowUpRight, Github, Linkedin, Mail } from 'lucide-rea
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { MotionReveal } from '@/components/MotionReveal';
+import { HeroCarousel } from '@/components/HeroCarousel';
 import GithubCalender from '@/components/GithubCalender';
 import { projects } from '@/components/data/project';
 
@@ -39,12 +40,8 @@ export default function Home() {
 					</ul>
 				</div>
 
-				<div className='hero-visual' aria-label='Portrait of Fayokunmi Osho and core technologies'>
-					<div className='portrait-frame'>
-						<div className='portrait-index'>01 / PORTFOLIO</div>
-						<Image src='/images/porfolioPicLight.png' alt='Fayokunmi Osho' width={550} height={550} priority className='portrait-light' />
-						<Image src='/images/porfolioPicDark.png' alt='Fayokunmi Osho' width={650} height={650} priority className='portrait-dark' />
-					</div>
+				<div className='hero-visual' aria-label='Portrait carousel and core technologies'>
+					<HeroCarousel />
 					<div className='capability-card'>
 						<p>Core toolkit</p>
 						<div>{capabilities.map((item) => <span key={item}>{item}</span>)}</div>
