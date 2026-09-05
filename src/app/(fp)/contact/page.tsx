@@ -1,67 +1,68 @@
 'use client';
-import React from 'react';
-import { useForm, SubmitHandler } from 'react-hook-form';
 
-const Contact = () => {
-	interface IFormInput {
-		name: string;
-		email: string;
-		message: string;
-	}
-	const {
-		register,
-		handleSubmit,
-		formState: { errors },
-	} = useForm<IFormInput>();
+import { ArrowUpRight, CheckCircle2, Loader2, Mail } from 'lucide-react';
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
 
-	const onSubmit: SubmitHandler<IFormInput> = (data) => console.log(data);
+type ContactFields = { name: string; email: string; projectType: string; message: string; website: string };
+
+export default function ContactPage() {
+	const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+	const { register, handleSubmit, reset, formState: { errors } } = useForm<ContactFields>();
+
+	const onSubmit = async (values: ContactFields) => {
+		setStatus('sending');
+		try {
+			const response = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(values) });
+			const data = await response.json();
+			if (!response.ok) throw new Error(data.error || 'Unable to send message');
+			if (data.fallbackMailto) window.location.href = data.fallbackMailto;
+			setStatus('sent');
+			reset();
+		} catch {
+			setStatus('error');
+		}
+	};
+
 	return (
-		<div className='w-full flex flex-col md:flex-row items-center justify-center  px-8 pt-20 md:px-20  pb-20 md:py-35  font-[Montserrat] dark:bg-[#0f172a] m-0'>
-			<div id='particles-js'></div>
-			<div className='flex flex-col items-center md:items-start pt-13 md:pt-5  justify-center min-h-auto p-0  gap-8 md:gap-14 md:p-0 w-[100%] md:w-1/2 '>
-				<div className='flex md:flex-row flex-col-reverse gap-0 '>
-					<p className='flex justify-center items-center text-1xl font-bold text-orange-500'>
-						______
-					</p>
-					<p className='text-black dark:text-white text-2xl md:text-2xl'>
-						Contact
-					</p>
-				</div>
-				<h2 className='flex flex-col justify-center md:justify-start items-center md:items-start text-4xl md:text-5xl font-bold text-black dark:text-white  w-[100%]'>
-					Have a project? <span>Lets talk</span>
-				</h2>
+		<main className='site-shell page-main contact-page'>
+			<div className='contact-intro'>
+				<p className='section-index'>06 / CONTACT</p>
+				<h1>Let&apos;s make something <span>worth using.</span></h1>
+				<p>Tell me what you&apos;re building, where you are in the process, and what a useful outcome looks like. I&apos;ll reply with clear next steps.</p>
+				<a href='mailto:fayokunmiosho@gmail.com' className='contact-email'><Mail size={18} /> fayokunmiosho@gmail.com <ArrowUpRight size={17} /></a>
+				<div className='availability-card'><span className='status-dot' /><div><strong>Currently available</strong><p>For selected freelance and product collaborations.</p></div></div>
 			</div>
-			<div className='flex justify-center items-center w-[80vw] md:w-1/2  h-[auto] '>
-				<form
-					onSubmit={handleSubmit(onSubmit)}
-					className='flex flex-col grow pt-6 '
-				>
-					<label>Name</label>
-					<input
-						{...register('name', { required: true })}
-						className='border-b-2 border-b-orange-500 dark:border-b-white '
-					/>
-					{errors.name && <span>This field is required</span>}
-					<label className='pt-3'>Email</label>
-					<input
-						{...register('email')}
-						className='border-b-2 border-b-orange-500 dark:border-b-white'
-					/>
-					{errors.email && <span>This field is required</span>}
-					<label className='pt-3'>Message</label>
-					<input
-						{...register('message')}
-						className='border-b-2 border-b-orange-500 dark:border-b-white'
-					/>
-					{errors.message && <span>This field is required</span>}
-					<input
-						type='submit'
-						className='cursor-pointer rounded-none py-2 px-3 bg-orange-500 border-2 border-orange-500 text-black dark:text-white hover:bg-transparent md:self-start  mt-4 md:w-[]'
-					/>
-				</form>
-			</div>
-		</div>
-	);
-};
 
-export default Contact;
+			<form className='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
+				<div className='form-field'>
+					<label htmlFor='name'>Your name</label>
+					<input id='name' placeholder='Ada Lovelace' aria-invalid={!!errors.name} {...register('name', { required: 'Please tell me your name.' })} />
+					{errors.name && <span className='field-error'>{errors.name.message}</span>}
+				</div>
+				<div className='form-field'>
+					<label htmlFor='email'>Email address</label>
+					<input id='email' type='email' placeholder='ada@company.com' aria-invalid={!!errors.email} {...register('email', { required: 'Please enter your email.', pattern: { value: /^\S+@\S+\.\S+$/, message: 'Enter a valid email address.' } })} />
+					{errors.email && <span className='field-error'>{errors.email.message}</span>}
+				</div>
+				<div className='form-field full-field'>
+					<label htmlFor='projectType'>What are we building?</label>
+					<select id='projectType' defaultValue='' {...register('projectType', { required: 'Choose the closest project type.' })}>
+						<option value='' disabled>Select a project type</option><option>Product or web app</option><option>Frontend engineering</option><option>Backend or API</option><option>Website</option><option>Something else</option>
+					</select>
+					{errors.projectType && <span className='field-error'>{errors.projectType.message}</span>}
+				</div>
+				<div className='form-field full-field'>
+					<label htmlFor='message'>A little context</label>
+					<textarea id='message' rows={6} placeholder='The product, the challenge, your timeline…' aria-invalid={!!errors.message} {...register('message', { required: 'Share a little about the project.', minLength: { value: 20, message: 'A few more details will help me respond well.' } })} />
+					{errors.message && <span className='field-error'>{errors.message.message}</span>}
+				</div>
+				<input className='honeypot' tabIndex={-1} autoComplete='off' aria-hidden='true' {...register('website')} />
+				<div className='form-submit full-field'>
+					<button type='submit' className='button button-primary' disabled={status === 'sending'}>{status === 'sending' ? <><Loader2 className='spin' size={18} /> Sending</> : <>Send enquiry <ArrowUpRight size={17} /></>}</button>
+					<p role='status'>{status === 'sent' && <><CheckCircle2 size={17} /> Your message is ready—thanks, I&apos;ll be in touch.</>}{status === 'error' && 'Something went wrong. Please email me directly instead.'}</p>
+				</div>
+			</form>
+		</main>
+	);
+}

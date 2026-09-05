@@ -1,43 +1,32 @@
 'use client';
-import React, { useState } from 'react';
 
+import { useTheme } from 'next-themes';
+import { useState } from 'react';
 import { GitHubCalendar } from 'react-github-calendar';
-import YearButton from './YearButton';
+import { MotionReveal } from './MotionReveal';
 
-const years: number[] = [2026, 2025, 2024, 2023, 2022];
+const years = [2026, 2025, 2024, 2023, 2022];
 
 export default function GithubCalender() {
 	const [year, setYear] = useState(2026);
+	const { resolvedTheme } = useTheme();
+
 	return (
-		<div className='pb-20 dark:bg-[#0f172a]'>
-			<div className='px-8 md:px-20 w-full h-full  dark:bg-[#0f172a] gap-4 md:gap-0 text-3xl md:text-4xl font-montserrat font-bold pt-10 pb-6'>
-				<h2>My GitHub Contributions</h2>
-			</div>
-			<div className='px-8 md:px-20 w-full h-full flex flex-col md:flex-row justify-between md:items-center dark:bg-[#0f172a] gap-4 md:gap-0'>
-				<div className='border border-slate-600  p-8 rounded-2xl'>
-					<GitHubCalendar
-						username='Fayorr'
-						year={year}
-						colorScheme='light'
-						fontSize={15}
-						blockSize={13}
-					/>
-				</div>
-				<div className=' flex md:flex-col flex-row justify-start md:justify-between  items-center gap-4 flex-wrap '>
-					{years.map((yearValue: number, index: number) => (
-						<div
-							key={index}
-							onClick={() => setYear(yearValue)}
-							className='cursor-pointer flex flex-row  md:flex-col justify-center items-center'
-						>
-							<YearButton
-								year={yearValue}
-								currentYear={year}
-							/>
-						</div>
+		<section className='site-shell github-section' aria-labelledby='github-heading'>
+			<MotionReveal className='section-heading'>
+				<div><p className='section-index'>04 / OPEN SOURCE</p><h2 id='github-heading'>Building in public.</h2></div>
+				<p>My contribution graph is a record of consistent practice, experiments, and products moving forward one commit at a time.</p>
+			</MotionReveal>
+			<MotionReveal className='calendar-panel' delay={.08}>
+				<div className='year-tabs' role='group' aria-label='Contribution year'>
+					{years.map((value) => (
+						<button key={value} onClick={() => setYear(value)} aria-pressed={value === year} className={value === year ? 'is-active' : ''}>{value}</button>
 					))}
 				</div>
-			</div>
-		</div>
+				<div className='calendar-scroll'>
+					<GitHubCalendar username='Fayorr' year={year} colorScheme={resolvedTheme === 'dark' ? 'dark' : 'light'} fontSize={14} blockSize={13} blockMargin={4} theme={{ light: ['#e6ebf2', '#c7d5ff', '#8fa8ff', '#5878ef', '#3155d9'], dark: ['#202a3a', '#35476c', '#526ba4', '#7892df', '#ffb31a'] }} />
+				</div>
+			</MotionReveal>
+		</section>
 	);
 }

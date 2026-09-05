@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Montserrat, Open_Sans, Roboto } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
+import { SiteEffects } from '@/components/SiteEffects';
 
 const montserrat = Montserrat({
 	variable: '--font-montserrat',
@@ -17,13 +18,16 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-	title: 'Fayokunmi Osho - Frontend Developer',
+	title: {
+		default: 'Fayokunmi Osho — Software Engineer',
+		template: '%s — Fayokunmi Osho',
+	},
 	description:
-		'Experienced Frontend Developer specializing in React, NextJS and TypeScript',
+		'Full-stack software engineer building dependable interfaces, APIs, and digital products with React, TypeScript, Node.js, and Go.',
 	openGraph: {
-		title: 'Fayokunmi Osho - Frontend Developer',
+		title: 'Fayokunmi Osho — Software Engineer',
 		description:
-			'Experienced Frontend Developer specializing in React, NextJS and TypeScript',
+			'Full-stack software engineer building dependable interfaces, APIs, and digital products.',
 		url: 'https://www.fayokunmiosho.com',
 		siteName: 'Fayokunmi Osho Portfolio',
 		images: [
@@ -39,9 +43,9 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: 'summary_large_image',
-		title: 'Fayokunmi Osho - Frontend Developer',
+		title: 'Fayokunmi Osho — Software Engineer',
 		description:
-			'Experienced Frontend Developer specializing in React, NextJS and TypeScript',
+			'Full-stack software engineer building dependable interfaces, APIs, and digital products.',
 		images: ['https://www.fayokunmiosho.com/og-image.png'],
 	},
 };
@@ -56,15 +60,14 @@ export default function RootLayout({
 			lang='en'
 			suppressHydrationWarning
 		>
-			<body
-				className={`${montserrat.variable} ${openSans.variable} ${roboto.variable} antialiased dark:bg-[#0f172a]`}
-			>
+			<body className={`${montserrat.variable} ${openSans.variable} ${roboto.variable} antialiased`}>
 				<ThemeProvider
 					attribute='class'
 					defaultTheme='dark'
 					enableSystem
 					disableTransitionOnChange
 				>
+					<SiteEffects />
 					{children}
 				</ThemeProvider>
 			</body>

@@ -1,55 +1,33 @@
-import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
-// import Image from 'next/image';
-import { Mail, Github, Linkedin } from 'lucide-react';
+import { ArrowUpRight, Github, Linkedin, Mail } from 'lucide-react';
 
-export const Footer = () => {
+export function Footer() {
 	return (
-		<footer
-			id='footer'
-			className='relative z-10'
-		>
-			{/* <br />
-				<br /> */}
-			<div className='flex flex-col items-center justify-between bg-[#fcddca] dark:bg-[#17232d] py-8  '>
-				<h2 className='font-[montserrat] text-lg py-1'>Fayokunmi Osho</h2>
-				<p className='py-8'>Designed with Love, All Rights Reserved.</p>
-				<div className='flex justify-between items-center w-[45vw] md:w-[calc(100vw/7)] '>
-					<div className='cursor-pointer flex justify-center items-center rounded-full h-12 w-12 bg-[#0f172a] dark:bg-white'>
-						<Link
-							target='_blank'
-							href='mailto:fayokunmiosho@gmail.com'
-						>
-							<Mail
-								size={25}
-								className='text-white dark:text-[#0f172a] '
-							/>
-						</Link>
-					</div>
-					<div className='cursor-pointer flex justify-center items-center rounded-full h-12 w-12 bg-[#0f172a] dark:bg-white'>
-						<Link
-							target='_blank'
-							href='https://www.linkedin.com/in/fayokunmi-osho'
-						>
-							<Linkedin
-								size={25}
-								className='text-white dark:text-[#0f172a] '
-							/>
-						</Link>
-					</div>
-					<div className='cursor-pointer flex justify-center items-center rounded-full h-12 w-12 bg-[#0f172a] dark:bg-white'>
-						<Link
-							target='_blank'
-							href='https://www.github.com/Fayorr'
-						>
-							<Github
-								size={25}
-								className='text-white dark:text-[#0f172a] '
-							/>
-						</Link>
-					</div>
+		<footer className='site-footer'>
+			<div className='site-shell footer-grid'>
+				<div className='footer-lead'>
+					<Image src='/icon.png' width={34} height={34} alt='' />
+					<p>Have an ambitious product in mind?</p>
+					<Link href='/contact'>Let&apos;s build it well. <ArrowUpRight size={22} /></Link>
 				</div>
+				<div>
+					<p className='footer-label'>Explore</p>
+					<Link href='/about'>About</Link>
+					<Link href='/projects'>Projects</Link>
+					<Link href='/blog'>Blog</Link>
+				</div>
+				<div>
+					<p className='footer-label'>Connect</p>
+					<a href='mailto:fayokunmiosho@gmail.com'><Mail size={15} /> Email</a>
+					<a href='https://github.com/Fayorr' target='_blank' rel='noreferrer'><Github size={15} /> GitHub</a>
+					<a href='https://www.linkedin.com/in/fayokunmi-osho' target='_blank' rel='noreferrer'><Linkedin size={15} /> LinkedIn</a>
+				</div>
+			</div>
+			<div className='site-shell footer-bottom'>
+				<span>© {new Date().getFullYear()} Fayokunmi Osho</span>
+				<span>Designed and engineered with care.</span>
 			</div>
 		</footer>
 	);
-};
+}

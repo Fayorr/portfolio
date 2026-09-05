@@ -1,95 +1,102 @@
-'use client';
-import Link from 'next/link';
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import './globals.css';
-
+import Link from 'next/link';
+import { ArrowDownRight, ArrowUpRight, Github, Linkedin, Mail } from 'lucide-react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { MotionReveal } from '@/components/MotionReveal';
 import GithubCalender from '@/components/GithubCalender';
-import { ParticleBackground } from '@/components/ui/ParticleBackground';
+import { projects } from '@/components/data/project';
+
+const socials = [
+	{ label: 'GitHub', href: 'https://github.com/Fayorr', icon: Github },
+	{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/fayokunmi-osho', icon: Linkedin },
+	{ label: 'Email', href: 'mailto:fayokunmiosho@gmail.com', icon: Mail },
+];
+
+const capabilities = ['TypeScript', 'React', 'Next.js', 'Node.js', 'Go', 'PostgreSQL'];
 
 export default function Home() {
 	return (
-		<div className='mx-auto w-full max-w-7xl dark:bg-[#0f172a]'>
-			<ParticleBackground />
+		<main>
 			<Header />
-			<div className='flex flex-col md:flex-row items-center justify-center  px-8 md:px-20 mt-20 md:mt-20 pt-10 md:pt-12 font-[Montserrat] dark:bg-[#0f172a]'>
-				<div className='flex flex-col items-center md:items-start mt-4 md:mt-5  justify-center min-h-auto p-0  gap-8 md:gap-14 md:p-0 w-[100%] md:w-1/2 '>
-					<h2 className='font-montserrat  md:text-4xl text-2xl font-bold dark:text-white text-black'>
-						Hello<span className='text-orange-500'>.</span>
-					</h2>
-					<div className='flex md:flex-row flex-col-reverse gap-2'>
-						<p className='flex justify-center items-center text-3xl font-bold text-orange-500'>
-							______
-						</p>
-						<p className='text-black dark:text-white text-2xl md:text-4xl'>
-							I&apos;m Fayo
-						</p>
+			<section className='site-shell hero' aria-labelledby='hero-title'>
+				<div className='hero-copy'>
+					<p className='eyebrow'><span className='status-dot' /> Available for thoughtful collaborations</p>
+					<h1 id='hero-title'>
+						Software engineer building <span>useful digital products.</span>
+					</h1>
+					<p className='hero-intro'>
+						I&apos;m Fayokunmi Osho, a full-stack developer focused on dependable web experiences—from precise interfaces to APIs, data systems, and the infrastructure behind them.
+					</p>
+					<div className='hero-actions'>
+						<Link href='/projects' className='button button-primary'>View selected work <ArrowDownRight size={18} /></Link>
+						<a href='https://drive.google.com/file/d/10nv7-3_Owb-CUjzqgpbZb8ediQiNubfA/view?usp=sharing' target='_blank' rel='noreferrer' className='button button-ghost'>Résumé <ArrowUpRight size={17} /></a>
 					</div>
-					<h2 className='text-3xl md:text-5xl font-bold text-black dark:text-white'>
-						Software Developer
-					</h2>
-					<div className='flex flex-row gap-2'>
-						<Button
-							className='cursor-pointer rounded-none p-5 bg-orange-500 border-2 border-orange-500 text-black dark:text-white hover:bg-transparent'
-							asChild
-						>
-							<Link
-								target='_blank'
-								href='https://wa.me/2348090928406?text=Hello%20Fayokunmi%2C%20I%20saw%20your%20portfolio%20and%20I%20have%20a%20project%20for%20you.'
-							>
-								Got a project?
-							</Link>
-						</Button>
-						<Button
-							className='cursor-pointer rounded-none p-5 bg-transparent text-black dark:text-white border-2 border-orange-500 hover:bg-orange-500'
-							asChild
-						>
-							<Link
-								target='_blank'
-								href='https://drive.google.com/file/d/10nv7-3_Owb-CUjzqgpbZb8ediQiNubfA/view?usp=sharing'
-							>
-								My resume
-							</Link>
-						</Button>
+					<ul className='social-list' aria-label='Social links'>
+						{socials.map(({ label, href, icon: Icon }) => (
+							<li key={label}><a href={href} target={href.startsWith('http') ? '_blank' : undefined} rel='noreferrer'><Icon size={16} />{label}</a></li>
+						))}
+					</ul>
+				</div>
+
+				<div className='hero-visual' aria-label='Portrait of Fayokunmi Osho and core technologies'>
+					<div className='portrait-frame'>
+						<div className='portrait-index'>01 / PORTFOLIO</div>
+						<Image src='/images/porfolioPicLight.png' alt='Fayokunmi Osho' width={550} height={550} priority className='portrait-light' />
+						<Image src='/images/porfolioPicDark.png' alt='Fayokunmi Osho' width={650} height={650} priority className='portrait-dark' />
+					</div>
+					<div className='capability-card'>
+						<p>Core toolkit</p>
+						<div>{capabilities.map((item) => <span key={item}>{item}</span>)}</div>
 					</div>
 				</div>
-				<div className='flex justify-center items-center '>
-					{/* Light mode image */}
-					<Image
-						src='/images/porfolioPicLight.png'
-						alt='Fayo'
-						width={550}
-						height={550}
-						className='block dark:hidden'
-					/>
-					{/* Dark mode image */}
-					<Image
-						src='/images/porfolioPicDark.png'
-						alt='Fayo'
-						width={650}
-						height={650}
-						className='hidden dark:block'
-					/>
-				</div>
+			</section>
+
+			<div className='ticker' aria-hidden='true'>
+				<div>DESIGN WITH INTENT <span>✦</span> BUILD FOR PEOPLE <span>✦</span> SHIP WITH CARE <span>✦</span> DESIGN WITH INTENT <span>✦</span> BUILD FOR PEOPLE <span>✦</span></div>
 			</div>
-			<section className='bg-[#fcddca] dark:bg-[#17232d] text-lg font-bold font-montserrat py-5 px-8 md:px-20 h-auto '>
-				<ul className='relative z-10  grid grid-cols-3 sm:grid-cols-4 md:flex md:justify-between gap-4 md:gap-0 text-center md:text-left'>
-					<li className='flex justify-start'>JavaScript</li>
-					<li className='flex justify-start'>ReactJS</li>
-					<li className='flex justify-start'>Next.js</li>
-					<li className='flex justify-start'>TypeScript</li>
-					<li className='flex justify-start'>NodeJS</li>
-					<li className='flex justify-start'>ExpressJS</li>
-					<li className='flex justify-start'>MongoDB</li>
-					<li className='flex justify-start'>Git</li>
-					<li className='flex justify-start'>Github</li>
-				</ul>
+
+			<section className='site-shell home-section' aria-labelledby='selected-work'>
+				<MotionReveal className='section-heading'>
+					<div><p className='section-index'>02 / SELECTED WORK</p><h2 id='selected-work'>A few things I&apos;ve built.</h2></div>
+					<p>Product-minded engineering across frontend systems, backend services, and the space where they meet.</p>
+				</MotionReveal>
+				<div className='featured-grid'>
+					{projects.filter((project) => project.featured).map((project, index) => (
+						<MotionReveal className='featured-project' key={project.slug} delay={index * .08}>
+							<Link href={`/projects/${project.slug}`} className='featured-image'>
+								<Image src={project.image} width={720} height={460} alt='' className={project.slug === 'eventful' ? 'eventful-art' : ''} />
+								<span>0{index + 1}</span>
+							</Link>
+							<div className='featured-body'>
+								<p className='project-card-meta'><span>{project.kicker}</span><span>{project.year}</span></p>
+								<h3><Link href={`/projects/${project.slug}`}>{project.name} <ArrowUpRight size={21} /></Link></h3>
+								<p>{project.summary}</p>
+								<div className='project-tags'>{project.skills.slice(0, 4).map((skill) => <span key={skill}>{skill}</span>)}</div>
+							</div>
+						</MotionReveal>
+					))}
+				</div>
+				<MotionReveal className='section-action'><Link href='/projects' className='button button-ghost'>Explore all projects <ArrowUpRight size={17} /></Link></MotionReveal>
+			</section>
+
+			<section className='about-strip'>
+				<div className='site-shell about-strip-grid'>
+					<MotionReveal><p className='section-index'>03 / APPROACH</p><h2>Good software feels inevitable.</h2></MotionReveal>
+					<MotionReveal delay={.1} className='about-strip-copy'>
+						<p>I care about the entire journey: understanding the real problem, reducing it to a clear system, and sweating the small implementation details that earn trust.</p>
+						<div className='principles'>
+							<div><span>01</span><strong>Clarity first</strong><p>Interfaces and APIs should explain themselves.</p></div>
+							<div><span>02</span><strong>Built to last</strong><p>Simple foundations make change less expensive.</p></div>
+							<div><span>03</span><strong>Human details</strong><p>Speed, feedback, and accessibility are product features.</p></div>
+						</div>
+						<Link href='/about' className='text-link'>More about how I work <ArrowUpRight size={17} /></Link>
+					</MotionReveal>
+				</div>
 			</section>
 
 			<GithubCalender />
 			<Footer />
-		</div>
+		</main>
 	);
 }
