@@ -171,7 +171,6 @@ button, input, textarea { font: inherit; }
 .featured-image::before, .project-image-wrap::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 20% 0%, color-mix(in srgb, var(--accent) 30%, transparent), transparent 32%), linear-gradient(135deg, transparent, color-mix(in srgb, var(--blue) 12%, transparent)); }
 .featured-image img, .project-image-wrap img { position: relative; width: 90%; height: 82%; object-fit: cover; border-radius: 9px; box-shadow: var(--shadow); transition: transform .5s cubic-bezier(.22,1,.36,1); }
 .featured-image:hover img, .project-image-wrap:hover img { transform: scale(1.025) rotate(-.25deg); }
-.featured-image .eventful-art, .project-image-wrap .eventful-art { width: 42%; object-fit: contain; box-shadow: none; }
 .featured-image > span { position: absolute; top: 18px; left: 18px; z-index: 2; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--foreground); color: var(--background); font-size: .72rem; font-weight: 800; }
 .featured-body { padding: 24px 4px 0; }
 .project-card-meta { display: flex; justify-content: space-between; gap: 18px; margin: 0; color: var(--muted); font-size: .74rem; font-weight: 750; letter-spacing: .06em; text-transform: uppercase; }
@@ -247,7 +246,7 @@ button, input, textarea { font: inherit; }
 .case-visual::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 25% 5%, color-mix(in srgb, var(--accent) 35%, transparent), transparent 35%), linear-gradient(145deg, transparent, color-mix(in srgb, var(--blue) 18%, transparent)); }
 .case-visual > span { position: absolute; top: 24px; left: 24px; z-index: 2; color: var(--muted); font-size: .7rem; font-weight: 800; letter-spacing: .1em; }
 .case-visual img { position: relative; width: 82%; max-height: 465px; object-fit: cover; border-radius: 12px; box-shadow: var(--shadow); }
-.case-visual .eventful-art { width: 30%; object-fit: contain; box-shadow: none; }
+.case-visual .eventful-art { width: 82%; max-height: none; object-fit: contain; box-shadow: var(--shadow); }
 .case-content { width: min(900px, calc(100% - 48px)); padding-block: 120px; }
 .case-intro { display: grid; grid-template-columns: 150px 1fr; gap: 30px; margin-bottom: 110px; }
 .case-intro > p:last-child { margin: 0; font: 500 clamp(1.55rem, 3vw, 2.4rem)/1.45 var(--font-montserrat), sans-serif; letter-spacing: -.035em; }

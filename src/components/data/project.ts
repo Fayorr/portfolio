@@ -37,7 +37,7 @@ export const projects: Project[] = [
 		highlights: ['Paystack payment verification', 'Automated QR-code ticket generation', 'Creator revenue and attendance analytics', 'Queued email reminders with BullMQ and Redis'],
 		liveLink: 'https://eventful-ecru.vercel.app',
 		githubLink: 'https://github.com/Fayorr/eventful-web',
-		image: '/images/projectImages/eventful.png',
+		image: '/images/projectImages/eventful-api.png',
 		featured: true,
 	},
 	{
