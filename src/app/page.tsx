@@ -79,9 +79,9 @@ export default function Home() {
 
 			<section className='about-strip'>
 				<div className='site-shell about-strip-grid'>
-					<MotionReveal><p className='section-index'>03 / APPROACH</p><h2>Good software feels inevitable.</h2></MotionReveal>
+					<MotionReveal><p className='section-index'>03 / APPROACH</p><h2>Good software is cooked not baked.</h2></MotionReveal>
 					<MotionReveal delay={.1} className='about-strip-copy'>
-						<p>I care about the entire journey: understanding the real problem, reducing it to a clear system, and sweating the small implementation details that earn trust.</p>
+						<p>I care about the entire journey: understanding the real problem, reducing it to a clear system, and sweating the small implementation details that earns your trust.</p>
 						<div className='principles'>
 							<div><span>01</span><strong>Clarity first</strong><p>Interfaces and APIs should explain themselves.</p></div>
 							<div><span>02</span><strong>Built to last</strong><p>Simple foundations make change less expensive.</p></div>

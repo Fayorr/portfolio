@@ -37,12 +37,12 @@ export default function ContactPage() {
 			<form className='contact-form' onSubmit={handleSubmit(onSubmit)} noValidate>
 				<div className='form-field'>
 					<label htmlFor='name'>Your name</label>
-					<input id='name' placeholder='Ada Lovelace' aria-invalid={!!errors.name} {...register('name', { required: 'Please tell me your name.' })} />
+					<input id='name' placeholder='Fola Coker' aria-invalid={!!errors.name} {...register('name', { required: 'Please tell me your name.' })} />
 					{errors.name && <span className='field-error'>{errors.name.message}</span>}
 				</div>
 				<div className='form-field'>
 					<label htmlFor='email'>Email address</label>
-					<input id='email' type='email' placeholder='ada@company.com' aria-invalid={!!errors.email} {...register('email', { required: 'Please enter your email.', pattern: { value: /^\S+@\S+\.\S+$/, message: 'Enter a valid email address.' } })} />
+					<input id='email' type='email' placeholder='fola@company.com' aria-invalid={!!errors.email} {...register('email', { required: 'Please enter your email.', pattern: { value: /^\S+@\S+\.\S+$/, message: 'Enter a valid email address.' } })} />
 					{errors.email && <span className='field-error'>{errors.email.message}</span>}
 				</div>
 				<div className='form-field full-field'>

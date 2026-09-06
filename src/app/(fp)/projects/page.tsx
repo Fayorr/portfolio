@@ -11,7 +11,7 @@ export default function ProjectsPage() {
 		<main className='site-shell page-main'>
 			<header className='page-hero'>
 				<p className='section-index'>02 / PROJECT ARCHIVE</p>
-				<h1>Selected work, <span>with the thinking included.</span></h1>
+				<h1>Selected work, <span>with case studies included.</span></h1>
 				<p>From event ticketing and publishing platforms to playful interface studies. Filter by discipline or technology, then open any project for the decisions behind the build.</p>
 			</header>
 			<ProjectsGrid />
